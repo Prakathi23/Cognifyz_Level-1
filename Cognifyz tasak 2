@@ -1,0 +1,48 @@
+ A basic calculator that adds two numbers together and displays the result using HTML and JavaScript:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <style>
+        .calculator {
+            margin: 100px auto;
+            width: 200px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        input {
+            margin: 10px 0;
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Basic Calculator</h2>
+        <input type="number" id="number1" placeholder="Enter first number">
+        <input type="number" id="number2" placeholder="Enter second number">
+        <button onclick="calculateSum()">Add</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function calculateSum() {
+            const num1 = parseFloat(document.getElementById('number1').value);
+            const num2 = parseFloat(document.getElementById('number2').value);
+            const sum = num1 + num2;
+
+            document.getElementById('result').innerText = `Result: ${sum}`;
+        }
+    </script>
+</body>
+</html>

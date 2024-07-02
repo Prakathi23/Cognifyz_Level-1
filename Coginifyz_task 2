@@ -1,0 +1,32 @@
+To create an alert box that displays a greeting message based on the current time using HTML and JavaScript:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Message</title>
+    <script>
+        function displayGreeting() {
+            const now = new Date();
+            const hours = now.getHours();
+            let greeting;
+
+            if (hours < 12) {
+                greeting = "Good morning!";
+            } else if (hours < 18) {
+                greeting = "Good afternoon!";
+            } else {
+                greeting = "Good evening!";
+            }
+
+            alert(greeting);
+        }
+
+        // Run the function when the page loads
+        window.onload = displayGreeting;
+    </script>
+</head>
+<body>
+</body>
+</html>
+
